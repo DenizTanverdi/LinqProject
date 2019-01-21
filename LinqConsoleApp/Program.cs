@@ -36,6 +36,10 @@ namespace LinqConsoleApp
             //db.Employees.DeleteOnSubmit(e);
             //db.SubmitChanges();
             #endregion
+
+            #region Query
+          
+            #endregion
             Console.ReadLine();
         }
     }
