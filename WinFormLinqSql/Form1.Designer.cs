@@ -45,14 +45,15 @@
             this.CustomerGird.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CustomerGird.Location = new System.Drawing.Point(12, 12);
             this.CustomerGird.Name = "CustomerGird";
-            this.CustomerGird.Size = new System.Drawing.Size(262, 413);
+            this.CustomerGird.Size = new System.Drawing.Size(294, 413);
             this.CustomerGird.TabIndex = 0;
+            this.CustomerGird.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CustomerGird_MouseClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.OrderDGrid);
             this.groupBox1.Controls.Add(this.OrderGrid);
-            this.groupBox1.Location = new System.Drawing.Point(274, 25);
+            this.groupBox1.Location = new System.Drawing.Point(306, 25);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(387, 400);
             this.groupBox1.TabIndex = 1;
@@ -78,16 +79,16 @@
             // SALES
             // 
             this.SALES.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SALES.Location = new System.Drawing.Point(661, 6);
+            this.SALES.Location = new System.Drawing.Point(693, 12);
             this.SALES.Name = "SALES";
-            this.SALES.Size = new System.Drawing.Size(270, 413);
+            this.SALES.Size = new System.Drawing.Size(406, 413);
             this.SALES.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 450);
+            this.ClientSize = new System.Drawing.Size(1111, 450);
             this.Controls.Add(this.SALES);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.CustomerGird);

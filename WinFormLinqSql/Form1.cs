@@ -25,5 +25,15 @@ namespace WinFormLinqSql
             var q = from c in db.Customers select new { c.CustomerID, c.CompanyName };
             CustomerGird.DataSource = q;
         }
+
+        private void CustomerGird_MouseClick(object sender, MouseEventArgs e)
+        {
+            string custId = CustomerGird.CurrentRow.Cells[0].Value.ToString();
+            var order = from ord in db.Orders where ord.CustomerID == custId select ord;
+            OrderGrid.DataSource = order;
+            int detId = Convert.ToInt32(OrderGrid.CurrentRow.Cells[0].Value.ToString());
+            var detail = from det in db.Order_Details where det.OrderID == detId select det;
+            OrderDGrid.DataSource = detail;
+        }
     }
 }
