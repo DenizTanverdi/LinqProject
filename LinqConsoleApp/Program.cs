@@ -24,9 +24,17 @@ namespace LinqConsoleApp
             #endregion
 
             #region Update
-            
 
+            //Employee e = db.Employees.FirstOrDefault(I => I.FirstName == "deniz");
+            //e.Title = "qwers";
+            //db.SubmitChanges();
 
+            #endregion
+
+            #region Delete
+            //Employee e = db.Employees.FirstOrDefault(I => I.FirstName == "deniz");
+            //db.Employees.DeleteOnSubmit(e);
+            //db.SubmitChanges();
             #endregion
             Console.ReadLine();
         }
