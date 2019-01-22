@@ -43,5 +43,24 @@ namespace WinFormLinqSql
             
          
         }
+
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            dataGridView2.DataSource = null;
+            int pid = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            var result = from p in db.Products
+                         join det in db.Order_Details on p.ProductID equals det.ProductID
+                         join ord in db.Orders on det.OrderID equals ord.OrderID
+                         join sh in db.Shippers on ord.ShipVia equals sh.ShipperID where p.ProductID==pid
+                         select new
+                         {
+                             p.ProductName,
+                             sh.CompanyName,
+                             ord.ShipCountry,
+                             ord.OrderDate
+                         };
+
+            dataGridView2.DataSource = result;
+        }
     }
 }
