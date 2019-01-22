@@ -35,5 +35,13 @@ namespace WinFormLinqSql
             var detail = from det in db.Order_Details where det.OrderID == detId select det;
             OrderDGrid.DataSource = detail;
         }
+
+        private void OrderGrid_MouseClick(object sender, MouseEventArgs e)
+        {
+            string orderId = OrderGrid.CurrentRow.Cells[0].Value.ToString();
+            var order = from ord in db.Order_Details where ord.OrderID == Convert.ToInt32(orderId) select ord;
+            OrderDGrid.DataSource = order;
+          
+        }
     }
 }

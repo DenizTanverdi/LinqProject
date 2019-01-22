@@ -30,13 +30,13 @@
         {
             this.CustomerGird = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.OrderGrid = new System.Windows.Forms.DataGridView();
             this.OrderDGrid = new System.Windows.Forms.DataGridView();
+            this.OrderGrid = new System.Windows.Forms.DataGridView();
             this.SALES = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerGird)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SALES)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,14 +60,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Siparişler";
             // 
-            // OrderGrid
-            // 
-            this.OrderGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OrderGrid.Location = new System.Drawing.Point(6, 19);
-            this.OrderGrid.Name = "OrderGrid";
-            this.OrderGrid.Size = new System.Drawing.Size(375, 150);
-            this.OrderGrid.TabIndex = 0;
-            // 
             // OrderDGrid
             // 
             this.OrderDGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -75,6 +67,15 @@
             this.OrderDGrid.Name = "OrderDGrid";
             this.OrderDGrid.Size = new System.Drawing.Size(375, 188);
             this.OrderDGrid.TabIndex = 1;
+            // 
+            // OrderGrid
+            // 
+            this.OrderGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OrderGrid.Location = new System.Drawing.Point(6, 19);
+            this.OrderGrid.Name = "OrderGrid";
+            this.OrderGrid.Size = new System.Drawing.Size(375, 150);
+            this.OrderGrid.TabIndex = 0;
+            this.OrderGrid.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderGrid_MouseClick);
             // 
             // SALES
             // 
@@ -97,8 +98,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CustomerGird)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SALES)).EndInit();
             this.ResumeLayout(false);
 
