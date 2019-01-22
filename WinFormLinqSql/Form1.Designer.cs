@@ -75,6 +75,7 @@
             this.OrderGrid.Name = "OrderGrid";
             this.OrderGrid.Size = new System.Drawing.Size(375, 150);
             this.OrderGrid.TabIndex = 0;
+            this.OrderGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OrderGrid_KeyDown);
             this.OrderGrid.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OrderGrid_MouseClick);
             // 
             // SALES
